@@ -22,6 +22,13 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float xAxis = Input.GetAxis("Horizontal");
 
+        Vector3 pos = transform.position;
+        pos.x += xAxis * speed * Time.deltaTime;
+        transform.position = pos;
+
+
+        //transform.position = xAxis;
     }//end Update()
 }
